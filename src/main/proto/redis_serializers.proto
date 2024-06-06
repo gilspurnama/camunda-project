@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_package = "com.example.workflow.dto.redis";
+
+message Path{
+  map<string,PathValue> values = 1;
+}
+
+message RolePermission{
+  map<string,int64> roleTimestamp = 1;
+  map<string,PathValue> paths = 2;
+}
+
+message PathValue{
+  repeated string values = 1;
+}
+
+message CacheInvalidator{
+  int64 timestamp = 1;
+  string group = 2;
+  string key = 3;
+}

@@ -1,0 +1,41 @@
+acls:
+  server: ${ACLS_SERVER:http://localhost:8181}
+spring:
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${OAUTH2_ISSUE_URI:http://localhost:8989/realms/master-dynamic}
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+#    url: jdbc:h2:file:./camunda-h2-database
+    url: ${DATASOURCE_URL:jdbc:mysql://localhost:3306/camunda_project}
+    username: ${DATASOURCE_USER:root}
+    password: ${DATASOURCE_PASSWORD:gp00GP))}
+# setting:
+#   email:
+#     api-key: ${EMAIL_API_KEY}
+
+camunda.bpm.admin-user:
+  id: admin
+  password: 123456
+
+camunda.bpm:
+  generic-properties:
+    properties:
+      historyTimeToLive: P1D
+  deployment-resource-pattern:
+    - classpath*:**/*.bpmn
+    - classpath*:**/*.bpmn20.xml
+    - classpath*:**/*.dmn
+    - classpath*:**/*.dmn11.xml
+    - classpath*:**/*.form
+
+server:
+  tomcat:
+    accept-count: 200

@@ -1,0 +1,24 @@
+{
+  "components": [
+    {
+      "label": "bank interest fee",
+      "type": "number",
+      "layout": {
+        "row": "Row_0unkopf",
+        "columns": null
+      },
+      "id": "Field_0452vpo",
+      "key": "bankFee",
+      "description": "bank interest fee in %"
+    }
+  ],
+  "type": "default",
+  "id": "interestForm",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.21.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.20.0",
+  "schemaVersion": 15
+}

@@ -1,0 +1,23 @@
+{
+  "components": [
+    {
+      "label": "deposit input field",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1omgmen",
+        "columns": null
+      },
+      "id": "Field_1lvaajj",
+      "key": "depositInput"
+    }
+  ],
+  "type": "default",
+  "id": "depositInputForm",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.4.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.21.0"
+  },
+  "schemaVersion": 15
+}
